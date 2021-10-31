@@ -23,6 +23,6 @@ try{
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch(PDOException $e){
-    echo "Database Connection Error, please check your connection file.";
+    echo "Database Connection Error, please check your connection file.".$e->getMessage();
     throw new PDOException($e->getMessage());
 }
