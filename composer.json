@@ -1,0 +1,12 @@
+{
+    "name": "asus/homehero_server",
+    "authors": [
+        {
+            "name": "marescanog",
+            "email": "marescanog@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    }
+}
