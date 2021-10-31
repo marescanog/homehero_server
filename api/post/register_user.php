@@ -5,7 +5,7 @@
 
     $level = '..';
     // Includes
-    require_once '../../config/conn.php';
+    require_once '../../conn.php';
     require_once '../../models/User.php';
 
     // Instantiate DB & connect
