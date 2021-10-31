@@ -24,5 +24,5 @@ try{
 
 } catch(PDOException $e){
     echo "Database Connection Error, please check your connection file.";
-    // throw new PDOException($e->getMessage());
+    throw new PDOException($e->getMessage());
 }
