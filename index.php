@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+// require_once 'vendor/autoload.php';
 
 // UNCOMMENT THESE LINES IF DEVELOPMENT
 // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);

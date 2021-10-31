@@ -2,9 +2,9 @@
 
 // var_dump(dirname(__FILE__));
 
-require_once(dirname(__FILE__).'/./config.php');
-
 // NOTE: When testing for local, comment out the production database code. 
+
+// require_once(dirname(__FILE__).'/./config.php');
 
 // // DEVELOPMENT VARIABLES
 // $conn_host = 'localhost';
