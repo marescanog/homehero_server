@@ -1,13 +1,11 @@
 <?php
-require_once('vendor/autoload.php');
+require_once 'vendor/autoload.php';
 
-// // TEST VARIABLES
+// UNCOMMENT THESE LINES IF DEVELOPMENT
 // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 // $dotenv->load();
-$db_host = $_ENV['DB_HOST'];
 
-// PRODUCTION VARIABLES
-// $db_host = getenv('DB_HOST');
+$db_host = $_ENV['DB_HOST'];
 
 ?>
 <!DOCTYPE html>
