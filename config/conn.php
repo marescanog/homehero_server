@@ -20,6 +20,11 @@ try{
 
     // PRODUCTION DATABASE CONNECTION
     $conn = new PDO("mysql:host=".$_ENV['DB_HOST'].";dbname=".$_ENV['DB_NAME'].";charset=utf8mb4", $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD']);
+    var_dump($_ENV['DB_HOST']);
+    var_dump($_ENV['DB_NAME']);
+    var_dump($_ENV['DB_USERNAME']);
+    var_dump($_ENV['DB_PASSWORD']);
+
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch(PDOException $e){
