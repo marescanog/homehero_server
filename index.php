@@ -18,5 +18,10 @@ $db_host = $_ENV['DB_HOST'];
 </head>
 <body>
     <p>This server is connected to: <?php echo isset($db_host) ? $db_host : "No Connection established"; ?></p>
+    <ul>
+        <li>
+            <a href="./api/post/register_user.php">Register User</a>
+        </li>
+    </ul>
 </body>
 </html>
