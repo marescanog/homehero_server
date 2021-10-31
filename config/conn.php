@@ -4,7 +4,7 @@
 
 // NOTE: When testing for local, comment out the production database code. 
 
-// require_once(dirname(__FILE__).'/config/config.php');
+// require_once(dirname(__FILE__).'/./config.php');
 
 // // DEVELOPMENT VARIABLES
 // $conn_host = 'localhost';
@@ -19,11 +19,14 @@ try{
     // $conn = new PDO($dsn, $user, $pass);
 
     // PRODUCTION DATABASE CONNECTION
-    $conn = new PDO("mysql:host=".$_ENV['DB_HOST'].";dbname=".$_ENV['DB_NAME'].";charset=utf8mb4", $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD']);
+    // $conn = new PDO("mysql:host=".$_ENV['DB_HOST'].";dbname=".$_ENV['DB_NAME'].";charset=utf8mb4", $_ENV['DB_USERNAME'], $_ENV['DB_PASSWORD']);
+
+    // PRODUCTION DATABASE DEPLOYMENT CONNECTION
+    $conn = new PDO("mysql:host=".getenv('DB_HOST').";dbname=".getenv('DB_NAME').";charset=utf8mb4", getenv('DB_USERNAME'), getenv('DB_PASSWORD'));
 
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch(PDOException $e){
-    echo "Database Connection Error, please check your connection file. ".$e->getMessage();
+    echo "Database Connection Error, please check your connection file."
     throw new PDOException($e->getMessage());
 }
